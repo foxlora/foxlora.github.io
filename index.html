@@ -145,88 +145,6 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-selenium操作示例" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="selenium"><a href="#selenium" class="headerlink" title="selenium"></a>selenium</h1><h2 id="一、获取input输入的文本值"><a href="#一、获取input输入的文本值" class="headerlink" title="一、获取input输入的文本值"></a>一、获取input输入的文本值</h2><p>1、通过get_attribute(‘value’)来获取输入的文本值</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a = self.bro.find_element_by_xpath(<span class="string">&#x27;//*[@id=&quot;nav_searchform&quot;]/input&#x27;</span>)</span><br><span class="line">c = a.get_attribute(<span class="string">&#x27;value&#x27;</span>)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>2、通过执行JS操作来获取输入的文本值</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">inputContext2 = <span class="string">&quot;return document.getElementsByClassName(&#x27;ivu-input&#x27;)[0].value&quot;</span></span><br><span class="line">driver.execute_script(inputContext2)</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-<h2 id="二、获取元素中的文本内容"><a href="#二、获取元素中的文本内容" class="headerlink" title="二、获取元素中的文本内容"></a>二、获取元素中的文本内容</h2><p><img src="https://img.kanzhun.com/images/seo/mianshiti/20191125/f9703b0af0b33cf64b233d66015bd5cf.png" alt="示例一"><br>1、通过get_attribute(‘textContent’)来获取元素的文本值</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">logoContext1 = driver.find_element_by_xpath(<span class="string">&#x27;//div[@class=&quot;logo&quot;]/span&#x27;</span>).get_attribute(<span class="string">&#x27;textContent&#x27;</span>)</span><br></pre></td></tr></table></figure>
-
-<p>2、通过text来获取文本值</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">logoContext2 = driver.find_element_by_xpath(<span class="string">&#x27;//div[@class=&quot;logo&quot;]/span&#x27;</span>).text</span><br></pre></td></tr></table></figure>
-
-<p>3、通过执行JS操作来获取输入的文本值</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">logoContext3 = <span class="string">&quot;return document.getElementsByTagName(&#x27;span&#x27;)[0].innerText&quot;</span></span><br></pre></td></tr></table></figure>
-
-
-
-
-
-<h2 id="三、获取cookies"><a href="#三、获取cookies" class="headerlink" title="三、获取cookies"></a>三、获取cookies</h2><p>1、执行 js 函数</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">js_code = <span class="string">&#x27;return document.cookie&#x27;</span>	</span><br><span class="line">cookies = driver.execute_script(js_code)</span><br><span class="line">print(cookies)</span><br></pre></td></tr></table></figure>
-
-<p>2、通过 get_cookies 函数</p>
-<h2 id="四、页面的点击和输入"><a href="#四、页面的点击和输入" class="headerlink" title="四、页面的点击和输入"></a>四、页面的点击和输入</h2><p>1、<code>send_keys()</code> 函数向浏览器发送信息</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a = self.bro.find_element_by_xpath(<span class="string">&#x27;//*[@id=&quot;nav_searchform&quot;]/input&#x27;</span>)</span><br><span class="line">a.send_keys(<span class="string">&#x27;key_value&#x27;</span>)</span><br></pre></td></tr></table></figure>
-
-
-
-<p>2、<code>click()</code> 函数模拟点击事件。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a = self.bro.find_element_by_xpath(<span class="string">&#x27;//*[@id=&quot;nav_searchform&quot;]/input&#x27;</span>)</span><br><span class="line">a.click()</span><br></pre></td></tr></table></figure>
-
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/10/05/selenium%E6%93%8D%E4%BD%9C%E7%A4%BA%E4%BE%8B/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
     <article id="post-python+selenium控制已打开的浏览器" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -289,19 +207,19 @@
 
 
   
-    <article id="post-fenlei" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-selenium操作示例" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/05/fenlei/">fenlei</a>
+      <a class="article-title" href="/2020/10/05/selenium%E6%93%8D%E4%BD%9C%E7%A4%BA%E4%BE%8B/">selenium使用</a>
     </h1>
   
 
         
-        <a href="/2020/10/05/fenlei/" class="archive-article-date">
+        <a href="/2020/10/05/selenium%E6%93%8D%E4%BD%9C%E7%A4%BA%E4%BE%8B/" class="archive-article-date">
   	<time datetime="2020-10-05T05:04:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-10-05</time>
 </a>
         
@@ -309,8 +227,41 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="feilei"><a href="#feilei" class="headerlink" title="feilei"></a>feilei</h1><p>sfasf </p>
-<p>adfs</p>
+        <h1 id="selenium"><a href="#selenium" class="headerlink" title="selenium"></a>selenium</h1><h2 id="一、获取input输入的文本值"><a href="#一、获取input输入的文本值" class="headerlink" title="一、获取input输入的文本值"></a>一、获取input输入的文本值</h2><p>1、通过get_attribute(‘value’)来获取输入的文本值</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a = self.bro.find_element_by_xpath(<span class="string">&#x27;//*[@id=&quot;nav_searchform&quot;]/input&#x27;</span>)</span><br><span class="line">c = a.get_attribute(<span class="string">&#x27;value&#x27;</span>)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>2、通过执行JS操作来获取输入的文本值</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">inputContext2 = <span class="string">&quot;return document.getElementsByClassName(&#x27;ivu-input&#x27;)[0].value&quot;</span></span><br><span class="line">driver.execute_script(inputContext2)</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h2 id="二、获取元素中的文本内容"><a href="#二、获取元素中的文本内容" class="headerlink" title="二、获取元素中的文本内容"></a>二、获取元素中的文本内容</h2><p><img src="https://img.kanzhun.com/images/seo/mianshiti/20191125/f9703b0af0b33cf64b233d66015bd5cf.png" alt="示例一"><br>1、通过get_attribute(‘textContent’)来获取元素的文本值</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">logoContext1 = driver.find_element_by_xpath(<span class="string">&#x27;//div[@class=&quot;logo&quot;]/span&#x27;</span>).get_attribute(<span class="string">&#x27;textContent&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>2、通过text来获取文本值</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">logoContext2 = driver.find_element_by_xpath(<span class="string">&#x27;//div[@class=&quot;logo&quot;]/span&#x27;</span>).text</span><br></pre></td></tr></table></figure>
+
+<p>3、通过执行JS操作来获取输入的文本值</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">logoContext3 = <span class="string">&quot;return document.getElementsByTagName(&#x27;span&#x27;)[0].innerText&quot;</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h2 id="三、获取cookies"><a href="#三、获取cookies" class="headerlink" title="三、获取cookies"></a>三、获取cookies</h2><p>1、执行 js 函数</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">js_code = <span class="string">&#x27;return document.cookie&#x27;</span>	</span><br><span class="line">cookies = driver.execute_script(js_code)</span><br><span class="line">print(cookies)</span><br></pre></td></tr></table></figure>
+
+<p>2、通过 get_cookies 函数</p>
+<h2 id="四、页面的点击和输入"><a href="#四、页面的点击和输入" class="headerlink" title="四、页面的点击和输入"></a>四、页面的点击和输入</h2><p>1、<code>send_keys()</code> 函数向浏览器发送信息</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a = self.bro.find_element_by_xpath(<span class="string">&#x27;//*[@id=&quot;nav_searchform&quot;]/input&#x27;</span>)</span><br><span class="line">a.send_keys(<span class="string">&#x27;key_value&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+
+
+<p>2、<code>click()</code> 函数模拟点击事件。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a = self.bro.find_element_by_xpath(<span class="string">&#x27;//*[@id=&quot;nav_searchform&quot;]/input&#x27;</span>)</span><br><span class="line">a.click()</span><br></pre></td></tr></table></figure>
+
 
       
 
@@ -319,11 +270,37 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">selenium</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">爬虫</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/爬虫//" class="article-tag-list-link color3">爬虫</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2020/10/05/fenlei/">展开全文 >></a>
+          <a class="article-more-a" href="/2020/10/05/selenium%E6%93%8D%E4%BD%9C%E7%A4%BA%E4%BE%8B/">展开全文 >></a>
         </p>
       
 
@@ -532,6 +509,14 @@ MathJax.Hub.Queue(function() {
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">selenium</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">爬虫</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>
