@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>每日优鲜-一面 | Foxlora</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="1.自我介绍 2.协同过滤 - 相似度计算，写出相似度计算公式 - 基于itemCF，热门item与所有的item相似度都比较高，怎么处理 - UserCF，ItemCF 分别适用场景 3.项目细节 - svd模型  dnn模型怎么做的- embedding层原理 - word2vec（这里自己说embedding和word2vec原理类似，然后还解释不清楚word2vec）   4.说说FM">
+<meta property="og:type" content="article">
+<meta property="og:title" content="每日优鲜-一面">
+<meta property="og:url" content="https://foxlora.github.io/2020/11/18/2020-11-18-%E6%AF%8F%E6%97%A5%E4%BC%98%E9%B2%9C-1%E9%9D%A2/index.html">
+<meta property="og:site_name" content="Foxlora">
+<meta property="og:description" content="1.自我介绍 2.协同过滤 - 相似度计算，写出相似度计算公式 - 基于itemCF，热门item与所有的item相似度都比较高，怎么处理 - UserCF，ItemCF 分别适用场景 3.项目细节 - svd模型  dnn模型怎么做的- embedding层原理 - word2vec（这里自己说embedding和word2vec原理类似，然后还解释不清楚word2vec）   4.说说FM">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-11-18T13:43:00.166Z">
+<meta property="article:modified_time" content="2020-11-20T05:47:04.865Z">
+<meta property="article:author" content="Foxlora">
+<meta property="article:tag" content="面经">
+<meta property="article:tag" content="每日优鲜">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Foxlora" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Foxlora</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://foxlora.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-2020-11-18-每日优鲜-1面" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/11/18/2020-11-18-%E6%AF%8F%E6%97%A5%E4%BC%98%E9%B2%9C-1%E9%9D%A2/" class="article-date">
+  <time datetime="2020-11-18T13:43:00.166Z" itemprop="datePublished">2020-11-18</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E9%9D%A2%E7%BB%8F/">面经</a>►<a class="article-category-link" href="/categories/%E9%9D%A2%E7%BB%8F/%E6%AF%8F%E6%97%A5%E4%BC%98%E9%B2%9C/">每日优鲜</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      每日优鲜-一面
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <hr>
+<p>1.自我介绍</p>
+<p>2.协同过滤</p>
+<pre><code>- 相似度计算，写出相似度计算公式
+- 基于itemCF，热门item与所有的item相似度都比较高，怎么处理
+- UserCF，ItemCF 分别适用场景</code></pre>
+<p>3.项目细节</p>
+<pre><code>- svd模型</code></pre>
+<ul>
+<li>dnn模型怎么做的<pre><code>- embedding层原理
+- word2vec（这里自己说embedding和word2vec原理类似，然后还解释不清楚word2vec）</code></pre>
+</li>
+</ul>
+<p>4.说说FM</p>
+<p>5.说说DeepFM</p>
+<p>6.手撕算法</p>
+<p>​<br>$$<br>给定正整数N，求\sqrt{N},精确到0.001<br>$$<br>​    </p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>embedding不熟，对自己项目不熟，第一次面试，没准备好。</p>
+<p>放一下最后的算法，这个自己也没完成，太弟弟了。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">给定正整数N 求根号N  精确到0.001</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line">__author__ = <span class="string">&#x27;Foxlora&#x27;</span></span><br><span class="line">__time__ = <span class="string">&#x27;2020/11/18 22:40&#x27;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">sqrt_binary</span>(<span class="params">n</span>):</span></span><br><span class="line">    low = <span class="number">0</span></span><br><span class="line">    high = n</span><br><span class="line">    <span class="keyword">while</span> high -low &gt; <span class="number">0.001</span>:</span><br><span class="line">        mid = (low + high)/<span class="number">2</span></span><br><span class="line">        <span class="keyword">if</span> mid * mid == n:</span><br><span class="line">            <span class="keyword">return</span> mid</span><br><span class="line">        <span class="keyword">elif</span> mid * mid &gt; n:</span><br><span class="line">            high = mid</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            low = mid</span><br><span class="line">    <span class="keyword">return</span> low,high</span><br><span class="line"></span><br><span class="line"><span class="comment">#牛顿法：</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">newton_sqrt</span>(<span class="params">n</span>):</span></span><br><span class="line">    x0 = n</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">        x1 = <span class="number">0.5</span> * (x0 + n / x0)</span><br><span class="line">        <span class="keyword">if</span> x0 - x1 &lt; <span class="number">0.001</span>:</span><br><span class="line">            <span class="keyword">return</span> x0</span><br><span class="line">        x0 = x1</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">a,c =  sqrt_binary(<span class="number">5</span>)</span><br><span class="line">print(a,c)</span><br><span class="line"></span><br><span class="line">d = newton_sqrt(<span class="number">5</span>)</span><br><span class="line">print(d)</span><br><span class="line"><span class="keyword">import</span> math</span><br><span class="line">b = math.sqrt(<span class="number">5</span>)</span><br><span class="line">print(b)</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://foxlora.github.io/2020/11/18/2020-11-18-%E6%AF%8F%E6%97%A5%E4%BC%98%E9%B2%9C-1%E9%9D%A2/" data-id="ckhq5bz500000n8lifzda94s4" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%AF%8F%E6%97%A5%E4%BC%98%E9%B2%9C/" rel="tag">每日优鲜</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%9D%A2%E7%BB%8F/" rel="tag">面经</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2020/11/20/2020-11-20-%E6%95%A6%E7%85%8C%E7%BD%91-1%E9%9D%A2/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          每日优鲜-一面
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/11/18/%E6%90%9C%E7%B4%A2%E6%8E%A8%E8%8D%90%E6%A8%A1%E5%9E%8B/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">搜索推荐算法模型</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Diary/">Diary</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Diary/Git/">Git</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/c/">c++</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/c/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/">网络编程</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/numpy/">numpy</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/pandas/">pandas</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/python/">python</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/python/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/">并发编程</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/python/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/%E5%8D%8F%E7%A8%8B/">协程</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/python/%E7%88%AC%E8%99%AB/">爬虫</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/python/%E7%88%AC%E8%99%AB/scrapy/">scrapy</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/python/%E7%BD%91%E7%BB%9C%E4%B8%8EWeb%E7%BC%96%E7%A8%8B/">网络与Web编程</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/spark/">spark</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/">后端开发</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB/">知识体系</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/">大数据</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F/">推荐系统</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F/TensorFlow-Serving/">TensorFlow Serving</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">机器学习</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E6%90%9C%E7%B4%A2%E6%8E%A8%E8%8D%90/">搜索推荐</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E7%89%B9%E5%BE%81%E5%A4%84%E7%90%86/">特征处理</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%88%AC%E8%99%AB/">爬虫</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%9D%A2%E7%BB%8F/">面经</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%9D%A2%E7%BB%8F/%E6%95%A6%E7%85%8C%E7%BD%91/">敦煌网</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%9D%A2%E7%BB%8F/%E6%AF%8F%E6%97%A5%E4%BC%98%E9%B2%9C/">每日优鲜</a></li></ul></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/" rel="tag">Git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/IO%E5%A4%9A%E8%B7%AF%E5%A4%8D%E7%94%A8/" rel="tag">IO多路复用</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/" rel="tag">Python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/TensorFlow-Serving/" rel="tag">TensorFlow Serving</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/asyncio/" rel="tag">asyncio</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/c/" rel="tag">c++</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/epoll/" rel="tag">epoll</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hadoop/" rel="tag">hadoop</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hive/" rel="tag">hive</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/numpy/" rel="tag">numpy</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/pandas/" rel="tag">pandas</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/" rel="tag">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/scrapy/" rel="tag">scrapy</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/selenium/" rel="tag">selenium</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/spark/" rel="tag">spark</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BA%8B%E4%BB%B6%E9%A9%B1%E5%8A%A8IO/" rel="tag">事件驱动IO</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8D%8F%E7%A8%8B/" rel="tag">协程</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/" rel="tag">后端开发</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE/" rel="tag">大数据</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F/" rel="tag">推荐系统</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%90%9C%E7%B4%A2%E6%8E%A8%E8%8D%90/" rel="tag">搜索推荐</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%A6%E7%85%8C%E7%BD%91/" rel="tag">敦煌网</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" rel="tag">机器学习</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%AF%8F%E6%97%A5%E4%BC%98%E9%B2%9C/" rel="tag">每日优鲜</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%88%AC%E8%99%AB/" rel="tag">爬虫</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%89%B9%E5%BE%81%E5%A4%84%E7%90%86/" rel="tag">特征处理</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB/" rel="tag">知识体系</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%BA%BF%E7%A8%8B%E6%B1%A0/" rel="tag">线程池</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%BF%9B%E7%A8%8B%E6%B1%A0/" rel="tag">进程池</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%9D%A2%E7%BB%8F/" rel="tag">面经</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Git/" style="font-size: 10px;">Git</a> <a href="/tags/IO%E5%A4%9A%E8%B7%AF%E5%A4%8D%E7%94%A8/" style="font-size: 10px;">IO多路复用</a> <a href="/tags/Python/" style="font-size: 10px;">Python</a> <a href="/tags/TensorFlow-Serving/" style="font-size: 10px;">TensorFlow Serving</a> <a href="/tags/asyncio/" style="font-size: 10px;">asyncio</a> <a href="/tags/c/" style="font-size: 10px;">c++</a> <a href="/tags/epoll/" style="font-size: 10px;">epoll</a> <a href="/tags/hadoop/" style="font-size: 10px;">hadoop</a> <a href="/tags/hive/" style="font-size: 10px;">hive</a> <a href="/tags/numpy/" style="font-size: 10px;">numpy</a> <a href="/tags/pandas/" style="font-size: 13.33px;">pandas</a> <a href="/tags/python/" style="font-size: 20px;">python</a> <a href="/tags/scrapy/" style="font-size: 10px;">scrapy</a> <a href="/tags/selenium/" style="font-size: 13.33px;">selenium</a> <a href="/tags/spark/" style="font-size: 13.33px;">spark</a> <a href="/tags/%E4%BA%8B%E4%BB%B6%E9%A9%B1%E5%8A%A8IO/" style="font-size: 10px;">事件驱动IO</a> <a href="/tags/%E5%8D%8F%E7%A8%8B/" style="font-size: 10px;">协程</a> <a href="/tags/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/" style="font-size: 10px;">后端开发</a> <a href="/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE/" style="font-size: 10px;">大数据</a> <a href="/tags/%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F/" style="font-size: 13.33px;">推荐系统</a> <a href="/tags/%E6%90%9C%E7%B4%A2%E6%8E%A8%E8%8D%90/" style="font-size: 10px;">搜索推荐</a> <a href="/tags/%E6%95%A6%E7%85%8C%E7%BD%91/" style="font-size: 10px;">敦煌网</a> <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" style="font-size: 16.67px;">机器学习</a> <a href="/tags/%E6%AF%8F%E6%97%A5%E4%BC%98%E9%B2%9C/" style="font-size: 10px;">每日优鲜</a> <a href="/tags/%E7%88%AC%E8%99%AB/" style="font-size: 16.67px;">爬虫</a> <a href="/tags/%E7%89%B9%E5%BE%81%E5%A4%84%E7%90%86/" style="font-size: 13.33px;">特征处理</a> <a href="/tags/%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB/" style="font-size: 10px;">知识体系</a> <a href="/tags/%E7%BA%BF%E7%A8%8B%E6%B1%A0/" style="font-size: 10px;">线程池</a> <a href="/tags/%E8%BF%9B%E7%A8%8B%E6%B1%A0/" style="font-size: 10px;">进程池</a> <a href="/tags/%E9%9D%A2%E7%BB%8F/" style="font-size: 13.33px;">面经</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">十一月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">十月 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/11/20/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91%E9%9C%80%E8%A6%81%E6%8E%8C%E6%8F%A1%E7%9F%A5%E8%AF%86%E6%8A%80%E8%83%BD/">后端开发需要掌握的知识技能</a>
+          </li>
+        
+          <li>
+            <a href="/2020/11/20/2020-11-20-%E6%95%A6%E7%85%8C%E7%BD%91-1%E9%9D%A2/">每日优鲜-一面</a>
+          </li>
+        
+          <li>
+            <a href="/2020/11/18/2020-11-18-%E6%AF%8F%E6%97%A5%E4%BC%98%E9%B2%9C-1%E9%9D%A2/">每日优鲜-一面</a>
+          </li>
+        
+          <li>
+            <a href="/2020/11/18/%E6%90%9C%E7%B4%A2%E6%8E%A8%E8%8D%90%E6%A8%A1%E5%9E%8B/">搜索推荐算法模型</a>
+          </li>
+        
+          <li>
+            <a href="/2020/11/17/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E4%B8%80%E8%88%AC%E5%A4%84%E7%90%86%E6%B5%81%E7%A8%8B/">机器学习一般特征处理流程</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 Foxlora<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
