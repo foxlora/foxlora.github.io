@@ -67,6 +67,191 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-2020-11-25-东方国际-1面" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/11/25/2020-11-25-%E4%B8%9C%E6%96%B9%E5%9B%BD%E9%99%85-1%E9%9D%A2/" class="article-date">
+  <time datetime="2020-11-25T14:34:47.287Z" itemprop="datePublished">2020-11-25</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E9%9D%A2%E7%BB%8F/">面经</a>►<a class="article-category-link" href="/categories/%E9%9D%A2%E7%BB%8F/%E4%B8%9C%E6%96%B9%E5%9B%BD%E9%99%85/">东方国际</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/11/25/2020-11-25-%E4%B8%9C%E6%96%B9%E5%9B%BD%E9%99%85-1%E9%9D%A2/">东方国际-一面</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>1.自我介绍</p>
+<p>2.python </p>
+<pre><code>- 生成器 迭代器
+- 列表，元组区别
+- 深拷贝 浅拷贝</code></pre>
+<p>3.pandas数据处理过程</p>
+<p>4.TensorFlow模型建立过程</p>
+<p>5.相似度计算，如果量很大的话，Faiss </p>
+<p>6.了解k8s吗</p>
+<p>总结：</p>
+<p>总体上问的还是很简单的</p>
+<p>k8s没用过，只知道是容器管理框架</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://foxlora.github.io/2020/11/25/2020-11-25-%E4%B8%9C%E6%96%B9%E5%9B%BD%E9%99%85-1%E9%9D%A2/" data-id="ckhxjqger0001fwli6w78298n" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E4%B8%9C%E6%96%B9%E5%9B%BD%E9%99%85/" rel="tag">东方国际</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%9D%A2%E7%BB%8F/" rel="tag">面经</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-git操作" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/11/24/git%E6%93%8D%E4%BD%9C/" class="article-date">
+  <time datetime="2020-11-24T08:24:09.838Z" itemprop="datePublished">2020-11-24</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h1><p>config 配置有system级别 global（用户级别） 和local（当前仓库）三个 设置先从system-》global-》local  底层配置会覆盖顶层配置 分别使用–system/global/local 可以定位到配置文件</p>
+<p>查看系统config</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --system --list</span><br></pre></td></tr></table></figure>
+
+<p>　<img src="C:\Users\18351\AppData\Roaming\Typora\typora-user-images\image-20201005112719149.png" alt="image-20201005112719149"></p>
+<p>查看当前用户（global）配置</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global --list</span><br></pre></td></tr></table></figure>
+
+<p> <img src="C:\Users\18351\AppData\Roaming\Typora\typora-user-images\image-20201005112644668.png" alt="image-20201005112644668"></p>
+<p>查看当前仓库配置信息</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --local --list</span><br></pre></td></tr></table></figure>
+
+<p> <img src="C:\Users\18351\AppData\Roaming\Typora\typora-user-images\image-20201005111723405.png" alt="fs"></p>
+<p>执行指令将文件添加到本地仓库：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git add .         &#x2F;&#x2F;添加当前文件夹下的所有文件</span><br><span class="line">$ git add **.cpp    &#x2F;&#x2F;添加当前文件夹下的**.cpp这个文件12</span><br></pre></td></tr></table></figure>
+
+<p>输入本次的提交说明，准备提交暂存区中的更改的已跟踪文件，单引号内为说明内容：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git commit -m &quot;layout&quot;  &#x2F;&#x2F;引号中的内容为对该文件的描述</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<p>执行命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;新建一个repository时会出现下面的代码，直接复制即可</span><br><span class="line">$ git remote add origin https:&#x2F;&#x2F;github.com&#x2F;foxlora&#x2F;Leetcode-Java-Foxlora.git</span><br></pre></td></tr></table></figure>
+
+<p>如果出现错误：fatal: remote origin already exists，则执行以下语句：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git remote rm origin</span><br></pre></td></tr></table></figure>
+
+<p>再重新执行：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git remote add origin git@github.com:foxlora&#x2F;Leetcode-Java-Foxlora.git</span><br></pre></td></tr></table></figure>
+
+
+
+<p>最后执行命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git push origin main</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git pull origin main --allow-unrelated-histories</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://foxlora.github.io/2020/11/24/git%E6%93%8D%E4%BD%9C/" data-id="ckhxjqgf20003fwli4zk7cdko" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-2020-11-20-敦煌网-1面" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/11/23/2020-11-20-%E6%95%A6%E7%85%8C%E7%BD%91-1%E9%9D%A2/" class="article-date">
+  <time datetime="2020-11-23T12:26:50.561Z" itemprop="datePublished">2020-11-23</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E9%9D%A2%E7%BB%8F/">面经</a>►<a class="article-category-link" href="/categories/%E9%9D%A2%E7%BB%8F/%E6%95%A6%E7%85%8C%E7%BD%91/">敦煌网</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/11/23/2020-11-20-%E6%95%A6%E7%85%8C%E7%BD%91-1%E9%9D%A2/">敦煌网-一面</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>1.自我介绍</p>
+<p>2.协同过滤，处理热门，如何加惩罚因子</p>
+<p>3.LR</p>
+<p>总结：</p>
+<p>公司想招有实际经验的人，我问了一些他们的日常工作，以及架构。</p>
+<p>模型用tf serving部署</p>
+<p>在线用 队列-redis</p>
+<p>侧重点在于 什么场景点，用什么算法为用户进行推荐</p>
+<p>ItemCF 的问题，改进方法：</p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/u014281392/article/details/103845379">https://blog.csdn.net/u014281392/article/details/103845379</a></p>
+<p>协同过滤缺陷：</p>
+<ol>
+<li>头部效应较明显：热门物品容易跟大量物品产生相似性，长尾物品由于特征稀疏，很少与其他物品产生相似性</li>
+<li>协同过滤仅利用用户和物品的交互信息，无法有效引用用户年龄，性别，商品描述，商品分类，当前时间，地理位置等一系列特征。</li>
+</ol>
+<p>解决办法：</p>
+<p>​    1.缓解哈利波特效应，增加热门商品惩罚，如归一化，分母系数调整</p>
+<p>​    2.矩阵分解算法，其他模型</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://foxlora.github.io/2020/11/23/2020-11-20-%E6%95%A6%E7%85%8C%E7%BD%91-1%E9%9D%A2/" data-id="ckhq5bz5g0009n8liccq3fmhv" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%95%A6%E7%85%8C%E7%BD%91/" rel="tag">敦煌网</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%9D%A2%E7%BB%8F/" rel="tag">面经</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-单例模式" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/11/21/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/" class="article-date">
@@ -230,14 +415,14 @@
 
 
   
-    <article id="post-2020-11-20-敦煌网-1面" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-2020-11-23-腾讯外包-1面2面" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2020/11/20/2020-11-20-%E6%95%A6%E7%85%8C%E7%BD%91-1%E9%9D%A2/" class="article-date">
+    <a href="/2020/11/20/2020-11-23-%E8%85%BE%E8%AE%AF%E5%A4%96%E5%8C%85-1%E9%9D%A22%E9%9D%A2/" class="article-date">
   <time datetime="2020-11-20T05:44:59.517Z" itemprop="datePublished">2020-11-20</time>
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/%E9%9D%A2%E7%BB%8F/">面经</a>►<a class="article-category-link" href="/categories/%E9%9D%A2%E7%BB%8F/%E6%95%A6%E7%85%8C%E7%BD%91/">敦煌网</a>
+    <a class="article-category-link" href="/categories/%E9%9D%A2%E7%BB%8F/">面经</a>►<a class="article-category-link" href="/categories/%E9%9D%A2%E7%BB%8F/%E8%85%BE%E8%AE%AF/">腾讯</a>
   </div>
 
   </div>
@@ -248,7 +433,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/11/20/2020-11-20-%E6%95%A6%E7%85%8C%E7%BD%91-1%E9%9D%A2/">敦煌网-一面</a>
+      <a class="article-title" href="/2020/11/20/2020-11-23-%E8%85%BE%E8%AE%AF%E5%A4%96%E5%8C%85-1%E9%9D%A22%E9%9D%A2/">腾讯-一面二面</a>
     </h1>
   
 
@@ -256,32 +441,32 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>1.自我介绍</p>
-<p>2.协同过滤，处理热门，如何加惩罚因子</p>
-<p>3.LR</p>
+        <p><strong>一面：</strong></p>
+<p>1.自我介绍</p>
+<p>2.做的项目的模块</p>
+<p>3.系统设计题：上游给定视频ID,URL，给下游返回这个视频的标注,如何构建系统</p>
+<p>4.python多线程，多进程</p>
+<p>5.手撕代码</p>
+<pre><code>- 给定有序 int 数组， 返回 target 索引，找不到返回 -1
+- 给定数组，有一个数数量大于整个数量的一半，找到这个数</code></pre>
+<p><strong>二面：</strong></p>
+<p>1.简单介绍自己技能</p>
+<p>2.工作中遇到的最大的挑战是什么</p>
+<p>3.TensorFlow训练慢，如何优化；TensorFlow GPU利用率低的原因有哪些，对TensorFlow的数据加载有了解吗</p>
+<p>4.系统设计问题，python能够实现真正意义上的多线程吗，C++呢。</p>
+<p>5.消息发到队列，工作线程消费消息需要加锁吗</p>
 <p>总结：</p>
-<p>公司想招有实际经验的人，我问了一些他们的日常工作，以及架构。</p>
-<p>模型用tf serving部署</p>
-<p>在线用 队列-redis</p>
-<p>侧重点在于 什么场景点，用什么算法为用户进行推荐</p>
-<p>ItemCF 的问题，改进方法：</p>
-<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/u014281392/article/details/103845379">https://blog.csdn.net/u014281392/article/details/103845379</a></p>
-<p>协同过滤缺陷：</p>
-<ol>
-<li>头部效应较明显：热门物品容易跟大量物品产生相似性，长尾物品由于特征稀疏，很少与其他物品产生相似性</li>
-<li>协同过滤仅利用用户和物品的交互信息，无法有效引用用户年龄，性别，商品描述，商品分类，当前时间，地理位置等一系列特征。</li>
-</ol>
-<p>解决办法：</p>
-<p>​    1.缓解哈利波特效应，增加热门商品惩罚，如归一化，分母系数调整</p>
-<p>​    2.矩阵分解算法，其他模型</p>
+<p>本次面试主要考察系统的设计，多线程，多进程的生产者消费者问题</p>
+<p>第一道算法题用二分查找；</p>
+<p>第二道是剑指Offer里面的题目。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://foxlora.github.io/2020/11/20/2020-11-20-%E6%95%A6%E7%85%8C%E7%BD%91-1%E9%9D%A2/" data-id="ckhq5bz5g0009n8liccq3fmhv" class="article-share-link">Share</a>
+      <a data-url="https://foxlora.github.io/2020/11/20/2020-11-23-%E8%85%BE%E8%AE%AF%E5%A4%96%E5%8C%85-1%E9%9D%A22%E9%9D%A2/" data-id="ckhxjqgeq0000fwli6btu3uqa" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%95%A6%E7%85%8C%E7%BD%91/" rel="tag">敦煌网</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%9D%A2%E7%BB%8F/" rel="tag">面经</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%85%BE%E8%AE%AF/" rel="tag">腾讯</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%9D%A2%E7%BB%8F/" rel="tag">面经</a></li></ul>
 
     </footer>
   </div>
@@ -462,173 +647,6 @@
 
 
   
-    <article id="post-pandas特征快速处理" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/11/17/pandas%E7%89%B9%E5%BE%81%E5%BF%AB%E9%80%9F%E5%A4%84%E7%90%86/" class="article-date">
-  <time datetime="2020-11-17T05:34:36.743Z" itemprop="datePublished">2020-11-17</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/pandas/">pandas</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/11/17/pandas%E7%89%B9%E5%BE%81%E5%BF%AB%E9%80%9F%E5%A4%84%E7%90%86/">pandas特征快速处理</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="预处理数据"><a href="#预处理数据" class="headerlink" title="预处理数据"></a><a target="_blank" rel="noopener" href="https://trickygo.github.io/Dive-into-DL-TensorFlow2.0/#/chapter03_DL-basics/3.16_kaggle-house-price?id=_3163-%E9%A2%84%E5%A4%84%E7%90%86%E6%95%B0%E6%8D%AE">预处理数据</a></h2><ol>
-<li>我们对连续数值的特征做标准化（standardization）：设该特征在整个数据集上的均值为μ\mu<em>μ</em>，标准差为σ\sigma<em>σ</em>。那么，我们可以将该特征的每个值先减去μ\mu<em>μ</em>再除以σ\sigma<em>σ</em>得到标准化后的每个特征值。对于缺失的特征值，我们将其替换成该特征的均值。</li>
-</ol>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">numeric_features = all_features.dtypes[all_features.dtypes != <span class="string">&#x27;object&#x27;</span>].index</span><br><span class="line">all_features[numeric_features] = all_features[numeric_features].apply(</span><br><span class="line">    <span class="keyword">lambda</span> x: (x - x.mean()) / (x.std()))</span><br><span class="line"><span class="comment"># 标准化后，每个特征的均值变为0，所以可以直接用0来替换缺失值</span></span><br><span class="line">all_features = all_features.fillna(<span class="number">0</span>)</span><br></pre></td></tr></table></figure>
-
-
-
-<ol start="2">
-<li>离散数值转成指示特征。举个例子，假设特征MSZoning里面有两个不同的离散值RL和RM，那么这一步转换将去掉MSZoning特征，并新加两个特征MSZoning_RL和MSZoning_RM，其值为0或1。如果一个样本原来在MSZoning里的值为RL，那么有MSZoning_RL=1且MSZoning_RM=0。</li>
-</ol>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># dummy_na=True将缺失值也当作合法的特征值并为其创建指示特征</span></span><br><span class="line">all_features = pd.get_dummies(all_features, dummy_na=<span class="literal">True</span>)</span><br><span class="line">all_features.shape <span class="comment"># (2919, 354)</span></span><br></pre></td></tr></table></figure>
-
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://foxlora.github.io/2020/11/17/pandas%E7%89%B9%E5%BE%81%E5%BF%AB%E9%80%9F%E5%A4%84%E7%90%86/" data-id="ckhmvkenm0000moli4d6vc33c" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/pandas/" rel="tag">pandas</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/" rel="tag">python</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-事件驱动IO" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/11/06/%E4%BA%8B%E4%BB%B6%E9%A9%B1%E5%8A%A8IO/" class="article-date">
-  <time datetime="2020-11-06T05:28:25.925Z" itemprop="datePublished">2020-11-06</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/python/">python</a>►<a class="article-category-link" href="/categories/python/%E7%BD%91%E7%BB%9C%E4%B8%8EWeb%E7%BC%96%E7%A8%8B/">网络与Web编程</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/11/06/%E4%BA%8B%E4%BB%B6%E9%A9%B1%E5%8A%A8IO/">python事件驱动IO</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote>
-<p><a target="_blank" rel="noopener" href="https://python3-cookbook.readthedocs.io/zh_CN/latest/c11/p12_understanding_event_driven_io.html">实现一个实践驱动的tcp echo服务器</a></p>
-</blockquote>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">EventHandler</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">fileno</span>(<span class="params">self</span>):</span></span><br><span class="line">        <span class="string">&#x27;Return the associated file descriptor&#x27;</span></span><br><span class="line">        <span class="keyword">raise</span> <span class="built_in">NotImplemented</span>(<span class="string">&#x27;must implement&#x27;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">wants_to_receive</span>(<span class="params">self</span>):</span></span><br><span class="line">        <span class="string">&#x27;Return True if receiving is allowed&#x27;</span></span><br><span class="line">        <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">handle_receive</span>(<span class="params">self</span>):</span></span><br><span class="line">        <span class="string">&#x27;Perform the receive operation&#x27;</span></span><br><span class="line">        <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">wants_to_send</span>(<span class="params">self</span>):</span></span><br><span class="line">        <span class="string">&#x27;Return True if sending is requested&#x27;</span></span><br><span class="line">        <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">handle_send</span>(<span class="params">self</span>):</span></span><br><span class="line">        <span class="string">&#x27;Send outgoing data&#x27;</span></span><br><span class="line">        <span class="keyword">pass</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> select</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">event_loop</span>(<span class="params">handlers</span>):</span></span><br><span class="line">    <span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">        wants_recv = [h <span class="keyword">for</span> h <span class="keyword">in</span> handlers <span class="keyword">if</span> h.wants_to_receive()]</span><br><span class="line">        wants_send = [h <span class="keyword">for</span> h <span class="keyword">in</span> handlers <span class="keyword">if</span> h.wants_to_send()]</span><br><span class="line">        can_recv, can_send, _ = select.select(wants_recv, wants_send, [])</span><br><span class="line">        <span class="keyword">for</span> h <span class="keyword">in</span> can_recv:</span><br><span class="line">            h.handle_receive()</span><br><span class="line">        <span class="keyword">for</span> h <span class="keyword">in</span> can_send:</span><br><span class="line">            h.handle_send()</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">TCPServer</span>(<span class="params">EventHandler</span>):</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self, address, client_handler, handler_list</span>):</span></span><br><span class="line">        self.sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)</span><br><span class="line">        self.sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, <span class="literal">True</span>)</span><br><span class="line">        self.sock.bind(address)</span><br><span class="line">        self.sock.listen(<span class="number">1</span>)</span><br><span class="line">        self.client_handler = client_handler</span><br><span class="line">        self.handler_list = handler_list</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">fileno</span>(<span class="params">self</span>):</span></span><br><span class="line">        <span class="keyword">return</span> self.sock.fileno()</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">wants_to_receive</span>(<span class="params">self</span>):</span></span><br><span class="line">        <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">handle_receive</span>(<span class="params">self</span>):</span></span><br><span class="line">        client, addr = self.sock.accept()</span><br><span class="line">        <span class="comment"># Add the client to the event loop&#x27;s handler list</span></span><br><span class="line">        self.handler_list.append(self.client_handler(client, self.handler_list))</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">TCPClient</span>(<span class="params">EventHandler</span>):</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self, sock, handler_list</span>):</span></span><br><span class="line">        self.sock = sock</span><br><span class="line">        self.handler_list = handler_list</span><br><span class="line">        self.outgoing = bytearray()</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">fileno</span>(<span class="params">self</span>):</span></span><br><span class="line">        <span class="keyword">return</span> self.sock.fileno()</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">close</span>(<span class="params">self</span>):</span></span><br><span class="line">        self.sock.close()</span><br><span class="line">        <span class="comment"># Remove myself from the event loop&#x27;s handler list</span></span><br><span class="line">        self.handler_list.remove(self)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">wants_to_send</span>(<span class="params">self</span>):</span></span><br><span class="line">        <span class="keyword">return</span> <span class="literal">True</span> <span class="keyword">if</span> self.outgoing <span class="keyword">else</span> <span class="literal">False</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">handle_send</span>(<span class="params">self</span>):</span></span><br><span class="line">        nsent = self.sock.send(self.outgoing)</span><br><span class="line">        self.outgoing = self.outgoing[nsent:]</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">TCPEchoClient</span>(<span class="params">TCPClient</span>):</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">wants_to_receive</span>(<span class="params">self</span>):</span></span><br><span class="line">        <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">handle_receive</span>(<span class="params">self</span>):</span></span><br><span class="line">        data = self.sock.recv(<span class="number">8192</span>)</span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> data:</span><br><span class="line">            self.close()</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            self.outgoing.extend(data)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">   handlers = []</span><br><span class="line">   handlers.append(TCPServer((<span class="string">&#x27;&#x27;</span>,<span class="number">16000</span>), TCPEchoClient, handlers))</span><br><span class="line">   event_loop(handlers)</span><br></pre></td></tr></table></figure>
-
-
-
-<p><strong>client端发送测试消息：</strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">from</span> socket <span class="keyword">import</span> socket, AF_INET, SOCK_STREAM</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>s = socket(AF_INET, SOCK_STREAM)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>s.connect((<span class="string">&#x27;localhost&#x27;</span>, <span class="number">20000</span>))</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>s.send(<span class="string">b&#x27;Hello&#x27;</span>)</span><br><span class="line"><span class="number">5</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>s.recv(<span class="number">8192</span>)</span><br><span class="line"><span class="string">b&#x27;Hello&#x27;</span></span><br><span class="line">&gt;&gt;&gt;</span><br></pre></td></tr></table></figure>
-
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://foxlora.github.io/2020/11/06/%E4%BA%8B%E4%BB%B6%E9%A9%B1%E5%8A%A8IO/" data-id="ckhmvkenw0005molic91f75q6" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/" rel="tag">python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E4%BA%8B%E4%BB%B6%E9%A9%B1%E5%8A%A8IO/" rel="tag">事件驱动IO</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-scrapy使用" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/11/04/scrapy%E4%BD%BF%E7%94%A8/" class="article-date">
-  <time datetime="2020-11-04T10:38:06.034Z" itemprop="datePublished">2020-11-04</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/python/">python</a>►<a class="article-category-link" href="/categories/python/%E7%88%AC%E8%99%AB/">爬虫</a>►<a class="article-category-link" href="/categories/python/%E7%88%AC%E8%99%AB/scrapy/">scrapy</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/11/04/scrapy%E4%BD%BF%E7%94%A8/">scrapy使用</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="一、项目流程"><a href="#一、项目流程" class="headerlink" title="一、项目流程"></a>一、项目流程</h3><p><strong>创建爬虫项目：</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scrapy startproject PROJECT_NAME</span><br></pre></td></tr></table></figure>
-
-
-
-<p><strong>创建爬虫文件：</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd PROJECT_NAME</span><br><span class="line"></span><br><span class="line">scrapy genspider SPIDER_NAME xxx.example.com</span><br></pre></td></tr></table></figure>
-
-
-
-<p><strong>开启爬虫任务：</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scrapy crawl first –nolog</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="二、编写细节"><a href="#二、编写细节" class="headerlink" title="二、编写细节"></a>二、编写细节</h3>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://foxlora.github.io/2020/11/04/scrapy%E4%BD%BF%E7%94%A8/" data-id="ckh3j66dp000bxslibqj4c3jp" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/" rel="tag">python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/scrapy/" rel="tag">scrapy</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
 
 
   <nav id="page-nav">
@@ -644,7 +662,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">分类</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Diary/">Diary</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Diary/Git/">Git</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/c/">c++</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/c/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/">网络编程</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/git/">git</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/git/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">git常用命令</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/numpy/">numpy</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/pandas/">pandas</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/python/">python</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/python/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/">并发编程</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/python/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/%E5%8D%8F%E7%A8%8B/">协程</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/python/%E7%88%AC%E8%99%AB/">爬虫</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/python/%E7%88%AC%E8%99%AB/scrapy/">scrapy</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/python/%E7%BD%91%E7%BB%9C%E4%B8%8EWeb%E7%BC%96%E7%A8%8B/">网络与Web编程</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/python/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">设计模式</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/python/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/">单例模式</a></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/spark/">spark</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/">后端开发</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB/">知识体系</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/">大数据</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F/">推荐系统</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F/TensorFlow-Serving/">TensorFlow Serving</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">机器学习</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E6%90%9C%E7%B4%A2%E6%8E%A8%E8%8D%90/">搜索推荐</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E7%89%B9%E5%BE%81%E5%A4%84%E7%90%86/">特征处理</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%88%AC%E8%99%AB/">爬虫</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%9D%A2%E7%BB%8F/">面经</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%9D%A2%E7%BB%8F/%E6%95%A6%E7%85%8C%E7%BD%91/">敦煌网</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%9D%A2%E7%BB%8F/%E6%AF%8F%E6%97%A5%E4%BC%98%E9%B2%9C/">每日优鲜</a></li></ul></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Diary/">Diary</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Diary/Git/">Git</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/c/">c++</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/c/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/">网络编程</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/git/">git</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/git/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">git常用命令</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/numpy/">numpy</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/pandas/">pandas</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/python/">python</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/python/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/">并发编程</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/python/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/%E5%8D%8F%E7%A8%8B/">协程</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/python/%E7%88%AC%E8%99%AB/">爬虫</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/python/%E7%88%AC%E8%99%AB/scrapy/">scrapy</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/python/%E7%BD%91%E7%BB%9C%E4%B8%8EWeb%E7%BC%96%E7%A8%8B/">网络与Web编程</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/python/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">设计模式</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/python/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/">单例模式</a></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/spark/">spark</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/">后端开发</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB/">知识体系</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/">大数据</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F/">推荐系统</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F/TensorFlow-Serving/">TensorFlow Serving</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">机器学习</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E6%90%9C%E7%B4%A2%E6%8E%A8%E8%8D%90/">搜索推荐</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E7%89%B9%E5%BE%81%E5%A4%84%E7%90%86/">特征处理</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%88%AC%E8%99%AB/">爬虫</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%9D%A2%E7%BB%8F/">面经</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%9D%A2%E7%BB%8F/%E4%B8%9C%E6%96%B9%E5%9B%BD%E9%99%85/">东方国际</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%9D%A2%E7%BB%8F/%E6%95%A6%E7%85%8C%E7%BD%91/">敦煌网</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%9D%A2%E7%BB%8F/%E6%AF%8F%E6%97%A5%E4%BC%98%E9%B2%9C/">每日优鲜</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%9D%A2%E7%BB%8F/%E8%85%BE%E8%AE%AF/">腾讯</a></li></ul></li></ul>
     </div>
   </div>
 
@@ -654,7 +672,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/" rel="tag">Git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/IO%E5%A4%9A%E8%B7%AF%E5%A4%8D%E7%94%A8/" rel="tag">IO多路复用</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/" rel="tag">Python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/TensorFlow-Serving/" rel="tag">TensorFlow Serving</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/asyncio/" rel="tag">asyncio</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/c/" rel="tag">c++</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/epoll/" rel="tag">epoll</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/" rel="tag">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" rel="tag">git常用命令</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hadoop/" rel="tag">hadoop</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hive/" rel="tag">hive</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/numpy/" rel="tag">numpy</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/pandas/" rel="tag">pandas</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/" rel="tag">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/scrapy/" rel="tag">scrapy</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/selenium/" rel="tag">selenium</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/spark/" rel="tag">spark</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BA%8B%E4%BB%B6%E9%A9%B1%E5%8A%A8IO/" rel="tag">事件驱动IO</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8D%8F%E7%A8%8B/" rel="tag">协程</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/" rel="tag">单例模式</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/" rel="tag">后端开发</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE/" rel="tag">大数据</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F/" rel="tag">推荐系统</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%90%9C%E7%B4%A2%E6%8E%A8%E8%8D%90/" rel="tag">搜索推荐</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%A6%E7%85%8C%E7%BD%91/" rel="tag">敦煌网</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" rel="tag">机器学习</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%AF%8F%E6%97%A5%E4%BC%98%E9%B2%9C/" rel="tag">每日优鲜</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%88%AC%E8%99%AB/" rel="tag">爬虫</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%89%B9%E5%BE%81%E5%A4%84%E7%90%86/" rel="tag">特征处理</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB/" rel="tag">知识体系</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%BA%BF%E7%A8%8B%E6%B1%A0/" rel="tag">线程池</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" rel="tag">设计模式</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%BF%9B%E7%A8%8B%E6%B1%A0/" rel="tag">进程池</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%9D%A2%E7%BB%8F/" rel="tag">面经</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/" rel="tag">Git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/IO%E5%A4%9A%E8%B7%AF%E5%A4%8D%E7%94%A8/" rel="tag">IO多路复用</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/" rel="tag">Python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/TensorFlow-Serving/" rel="tag">TensorFlow Serving</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/asyncio/" rel="tag">asyncio</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/c/" rel="tag">c++</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/epoll/" rel="tag">epoll</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/" rel="tag">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" rel="tag">git常用命令</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hadoop/" rel="tag">hadoop</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hive/" rel="tag">hive</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/numpy/" rel="tag">numpy</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/pandas/" rel="tag">pandas</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/" rel="tag">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/scrapy/" rel="tag">scrapy</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/selenium/" rel="tag">selenium</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/spark/" rel="tag">spark</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%B8%9C%E6%96%B9%E5%9B%BD%E9%99%85/" rel="tag">东方国际</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BA%8B%E4%BB%B6%E9%A9%B1%E5%8A%A8IO/" rel="tag">事件驱动IO</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8D%8F%E7%A8%8B/" rel="tag">协程</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/" rel="tag">单例模式</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/" rel="tag">后端开发</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE/" rel="tag">大数据</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F/" rel="tag">推荐系统</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%90%9C%E7%B4%A2%E6%8E%A8%E8%8D%90/" rel="tag">搜索推荐</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%A6%E7%85%8C%E7%BD%91/" rel="tag">敦煌网</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" rel="tag">机器学习</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%AF%8F%E6%97%A5%E4%BC%98%E9%B2%9C/" rel="tag">每日优鲜</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%88%AC%E8%99%AB/" rel="tag">爬虫</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%89%B9%E5%BE%81%E5%A4%84%E7%90%86/" rel="tag">特征处理</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB/" rel="tag">知识体系</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%BA%BF%E7%A8%8B%E6%B1%A0/" rel="tag">线程池</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%85%BE%E8%AE%AF/" rel="tag">腾讯</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" rel="tag">设计模式</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%BF%9B%E7%A8%8B%E6%B1%A0/" rel="tag">进程池</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%9D%A2%E7%BB%8F/" rel="tag">面经</a></li></ul>
     </div>
   </div>
 
@@ -664,7 +682,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签云</h3>
     <div class="widget tagcloud">
-      <a href="/tags/Git/" style="font-size: 10px;">Git</a> <a href="/tags/IO%E5%A4%9A%E8%B7%AF%E5%A4%8D%E7%94%A8/" style="font-size: 10px;">IO多路复用</a> <a href="/tags/Python/" style="font-size: 10px;">Python</a> <a href="/tags/TensorFlow-Serving/" style="font-size: 10px;">TensorFlow Serving</a> <a href="/tags/asyncio/" style="font-size: 10px;">asyncio</a> <a href="/tags/c/" style="font-size: 10px;">c++</a> <a href="/tags/epoll/" style="font-size: 10px;">epoll</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" style="font-size: 10px;">git常用命令</a> <a href="/tags/hadoop/" style="font-size: 10px;">hadoop</a> <a href="/tags/hive/" style="font-size: 10px;">hive</a> <a href="/tags/numpy/" style="font-size: 10px;">numpy</a> <a href="/tags/pandas/" style="font-size: 13.33px;">pandas</a> <a href="/tags/python/" style="font-size: 20px;">python</a> <a href="/tags/scrapy/" style="font-size: 10px;">scrapy</a> <a href="/tags/selenium/" style="font-size: 13.33px;">selenium</a> <a href="/tags/spark/" style="font-size: 13.33px;">spark</a> <a href="/tags/%E4%BA%8B%E4%BB%B6%E9%A9%B1%E5%8A%A8IO/" style="font-size: 10px;">事件驱动IO</a> <a href="/tags/%E5%8D%8F%E7%A8%8B/" style="font-size: 10px;">协程</a> <a href="/tags/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/" style="font-size: 10px;">单例模式</a> <a href="/tags/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/" style="font-size: 10px;">后端开发</a> <a href="/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE/" style="font-size: 10px;">大数据</a> <a href="/tags/%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F/" style="font-size: 13.33px;">推荐系统</a> <a href="/tags/%E6%90%9C%E7%B4%A2%E6%8E%A8%E8%8D%90/" style="font-size: 10px;">搜索推荐</a> <a href="/tags/%E6%95%A6%E7%85%8C%E7%BD%91/" style="font-size: 10px;">敦煌网</a> <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" style="font-size: 16.67px;">机器学习</a> <a href="/tags/%E6%AF%8F%E6%97%A5%E4%BC%98%E9%B2%9C/" style="font-size: 10px;">每日优鲜</a> <a href="/tags/%E7%88%AC%E8%99%AB/" style="font-size: 16.67px;">爬虫</a> <a href="/tags/%E7%89%B9%E5%BE%81%E5%A4%84%E7%90%86/" style="font-size: 13.33px;">特征处理</a> <a href="/tags/%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB/" style="font-size: 10px;">知识体系</a> <a href="/tags/%E7%BA%BF%E7%A8%8B%E6%B1%A0/" style="font-size: 10px;">线程池</a> <a href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" style="font-size: 10px;">设计模式</a> <a href="/tags/%E8%BF%9B%E7%A8%8B%E6%B1%A0/" style="font-size: 10px;">进程池</a> <a href="/tags/%E9%9D%A2%E7%BB%8F/" style="font-size: 13.33px;">面经</a>
+      <a href="/tags/Git/" style="font-size: 10px;">Git</a> <a href="/tags/IO%E5%A4%9A%E8%B7%AF%E5%A4%8D%E7%94%A8/" style="font-size: 10px;">IO多路复用</a> <a href="/tags/Python/" style="font-size: 10px;">Python</a> <a href="/tags/TensorFlow-Serving/" style="font-size: 10px;">TensorFlow Serving</a> <a href="/tags/asyncio/" style="font-size: 10px;">asyncio</a> <a href="/tags/c/" style="font-size: 10px;">c++</a> <a href="/tags/epoll/" style="font-size: 10px;">epoll</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" style="font-size: 10px;">git常用命令</a> <a href="/tags/hadoop/" style="font-size: 10px;">hadoop</a> <a href="/tags/hive/" style="font-size: 10px;">hive</a> <a href="/tags/numpy/" style="font-size: 10px;">numpy</a> <a href="/tags/pandas/" style="font-size: 12.5px;">pandas</a> <a href="/tags/python/" style="font-size: 20px;">python</a> <a href="/tags/scrapy/" style="font-size: 10px;">scrapy</a> <a href="/tags/selenium/" style="font-size: 12.5px;">selenium</a> <a href="/tags/spark/" style="font-size: 12.5px;">spark</a> <a href="/tags/%E4%B8%9C%E6%96%B9%E5%9B%BD%E9%99%85/" style="font-size: 10px;">东方国际</a> <a href="/tags/%E4%BA%8B%E4%BB%B6%E9%A9%B1%E5%8A%A8IO/" style="font-size: 10px;">事件驱动IO</a> <a href="/tags/%E5%8D%8F%E7%A8%8B/" style="font-size: 10px;">协程</a> <a href="/tags/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/" style="font-size: 10px;">单例模式</a> <a href="/tags/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/" style="font-size: 10px;">后端开发</a> <a href="/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE/" style="font-size: 10px;">大数据</a> <a href="/tags/%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F/" style="font-size: 12.5px;">推荐系统</a> <a href="/tags/%E6%90%9C%E7%B4%A2%E6%8E%A8%E8%8D%90/" style="font-size: 10px;">搜索推荐</a> <a href="/tags/%E6%95%A6%E7%85%8C%E7%BD%91/" style="font-size: 10px;">敦煌网</a> <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" style="font-size: 15px;">机器学习</a> <a href="/tags/%E6%AF%8F%E6%97%A5%E4%BC%98%E9%B2%9C/" style="font-size: 10px;">每日优鲜</a> <a href="/tags/%E7%88%AC%E8%99%AB/" style="font-size: 15px;">爬虫</a> <a href="/tags/%E7%89%B9%E5%BE%81%E5%A4%84%E7%90%86/" style="font-size: 12.5px;">特征处理</a> <a href="/tags/%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB/" style="font-size: 10px;">知识体系</a> <a href="/tags/%E7%BA%BF%E7%A8%8B%E6%B1%A0/" style="font-size: 10px;">线程池</a> <a href="/tags/%E8%85%BE%E8%AE%AF/" style="font-size: 10px;">腾讯</a> <a href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" style="font-size: 10px;">设计模式</a> <a href="/tags/%E8%BF%9B%E7%A8%8B%E6%B1%A0/" style="font-size: 10px;">进程池</a> <a href="/tags/%E9%9D%A2%E7%BB%8F/" style="font-size: 17.5px;">面经</a>
     </div>
   </div>
 
@@ -686,23 +704,23 @@
       <ul>
         
           <li>
+            <a href="/2020/11/25/2020-11-25-%E4%B8%9C%E6%96%B9%E5%9B%BD%E9%99%85-1%E9%9D%A2/">东方国际-一面</a>
+          </li>
+        
+          <li>
+            <a href="/2020/11/24/git%E6%93%8D%E4%BD%9C/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2020/11/23/2020-11-20-%E6%95%A6%E7%85%8C%E7%BD%91-1%E9%9D%A2/">敦煌网-一面</a>
+          </li>
+        
+          <li>
             <a href="/2020/11/21/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/">python实现单例模式</a>
           </li>
         
           <li>
             <a href="/2020/11/20/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">git常用命令</a>
-          </li>
-        
-          <li>
-            <a href="/2020/11/20/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91%E9%9C%80%E8%A6%81%E6%8E%8C%E6%8F%A1%E7%9F%A5%E8%AF%86%E6%8A%80%E8%83%BD/">后端开发需要掌握的知识技能</a>
-          </li>
-        
-          <li>
-            <a href="/2020/11/20/2020-11-20-%E6%95%A6%E7%85%8C%E7%BD%91-1%E9%9D%A2/">敦煌网-一面</a>
-          </li>
-        
-          <li>
-            <a href="/2020/11/18/2020-11-18-%E6%AF%8F%E6%97%A5%E4%BC%98%E9%B2%9C-1%E9%9D%A2/">每日优鲜-一面</a>
           </li>
         
       </ul>
